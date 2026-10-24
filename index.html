@@ -134,14 +134,14 @@
     <div id="sidebar-overlay" onclick="toggleSidebar(false)" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 hidden md:hidden transition-opacity duration-300"></div>
 
     <!-- SIDEBAR NAVIGATION -->
-    <aside id="sidebar" class="sidebar-collapsed md:sidebar-expanded fixed md:sticky top-0 h-screen h-[100dvh] w-72 bg-cybercard/95 backdrop-blur-xl border-r border-cyan-500/30 z-50 flex flex-col justify-between shadow-2xl shrink-0 transition-transform duration-300">
+    <aside id="sidebar" class="sidebar-collapsed md:sidebar-expanded fixed md:sticky top-0 h-screen h-[100dvh] w-72 bg-cybercard/95 backdrop-blur-xl border-r border-cyan-500/30 z-50 flex flex-col shadow-2xl shrink-0 transition-transform duration-300">
         
         <!-- CENTER-EDGE TOGGLE BUTTON -->
         <button id="sidebar-toggle-btn" onclick="toggleSidebar()" title="Toggle Sidebar" class="absolute -right-4 top-1/2 -translate-y-1/2 w-9 h-12 bg-slate-900 border border-cyan-500/50 rounded-r-xl text-cyan-400 hover:text-white flex items-center justify-center shadow-glow-cyan z-50 cursor-pointer transition-all hover:w-10">
             <i id="sidebar-toggle-icon" class="fa-solid fa-chevron-right md:fa-chevron-left text-xs transition-transform duration-300"></i>
         </button>
 
-        <div class="flex-1 overflow-y-auto smooth-scroll p-3 space-y-3">
+        <div class="flex-1 overflow-y-auto smooth-scroll p-3 space-y-3 pb-20 md:pb-3">
             <div class="p-3 border-b border-cyan-500/20 flex items-center justify-between bg-slate-950/40 rounded-xl">
                 <div class="flex items-center gap-3 overflow-hidden">
                     <div class="w-10 h-10 shrink-0 rounded-lg bg-gradient-to-tr from-cyan-500 via-fuchsia-600 to-red-600 flex items-center justify-center text-slate-950 font-black shadow-glow-cyan">
@@ -198,14 +198,15 @@
                     <i class="fa-solid fa-user-pen text-base shrink-0 text-amber-400"></i>
                     <span class="whitespace-nowrap font-cyber">Personal Report</span>
                 </button>
-            </nav>
-        </div>
 
-        <div class="p-3 border-t border-cyan-500/20 bg-slate-950/80 shrink-0 space-y-2">
-            <button onclick="openSheetConfigModal()" class="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 text-xs font-semibold transition border border-emerald-500/30 hover:shadow-glow-green">
-                <i class="fa-solid fa-file-excel shrink-0 text-sm"></i>
-                <span class="whitespace-nowrap font-cyber">Google Sheets Sync</span>
-            </button>
+                <!-- Tombol Google Sheets Sync (Dipindah ke dalam area navigasi) -->
+                <div class="pt-3 mt-3 border-t border-cyan-500/20">
+                    <button onclick="openSheetConfigModal()" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-all bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 hover:shadow-glow-green">
+                        <i class="fa-solid fa-file-excel text-base shrink-0"></i>
+                        <span class="whitespace-nowrap font-cyber">Google Sheets Sync</span>
+                    </button>
+                </div>
+            </nav>
         </div>
     </aside>
 
